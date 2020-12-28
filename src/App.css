@@ -3,14 +3,9 @@
 }
 
 .App-logo {
+  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -24,6 +19,10 @@
   color: white;
 }
 
+border-bottom {
+  color: #fff;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -34,5 +33,30 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+/* Navbar */
+.logo {
+  width: 25%;
+}
+
+.nav-theme {
+  background-color: #101018f8;
+  font-size: 20px;
+}
+
+.animate-navbar {
+  box-shadow: 1px 1px 1px #222;
+  animation: moveDown 0.5s ease-in-out;
+}
+
+@keyframes moveDown {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0rem);
   }
 }

@@ -1,16 +1,20 @@
 import React from "react";
 
-import Card from "../components/Card";
+import ImageCard from "../components/ImageCard";
+import ImageCardInfo from "../components/ImageCardInfo";
 
-import gpa from "../assets/images/gpa.jpg";
-import sixfeet from "../assets/images/sixfeet.png";
-import helpinghand from "../assets/images/helpinghand.jpg";
+
+import one from "../assets/images/001.jpg";
+import two from "../assets/images/002.jpg";
+import three from "../assets/images/003.jpg";
+import four from "../assets/images/004.png";
+
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-class Carousel extends React.Component {
+class Gallery extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,7 +23,7 @@ class Carousel extends React.Component {
                     id: 0,
                     title: "AOC's Helping Hand",
                     subTitle: "College and Career Program for alma mater HS.",
-                    imgSrc: helpinghand,
+                    imgSrc: one,
                     link: "https://www.aochelpinghand.org",
                     selected: false
                 },
@@ -27,7 +31,7 @@ class Carousel extends React.Component {
                     id: 1,
                     title: "Six Feet Supplies",
                     subTitle: "Nonprofit that delivers groceries to the immunocompromised.",
-                    imgSrc: sixfeet,
+                    imgSrc: two,
                     link: "https://www.sixfeetsupplies.com",
                     selected: false
                 },
@@ -35,7 +39,15 @@ class Carousel extends React.Component {
                     id: 2,
                     title: "Global Prep Academy",
                     subTitle: "Website for after-school skill-building and global leadership program",
-                    imgSrc: gpa,
+                    imgSrc: three,
+                    link: "https://www.globalprepacademy.com",
+                    selected: false
+                },
+                {
+                    id: 3,
+                    title: "Commes Des Garcons",
+                    subTitle: "Website for after-school skill-building and global leadership program",
+                    imgSrc: four,
                     link: "https://www.globalprepacademy.com",
                     selected: false
                 },
@@ -46,7 +58,7 @@ class Carousel extends React.Component {
 
 
 
-    handleCardClick = (id, card) => {
+    handleCardHover = (id, card) => {
         
         let items = [...this.state.items];
 
@@ -65,7 +77,7 @@ class Carousel extends React.Component {
 
     makeItems = (items) => {
         return items.map(item => {
-            return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
+            return <ImageCard item={item} onMouseOver={(e => this.handleCardHover(item.id, e))} key={item.id} />
         })
     }
 
@@ -73,7 +85,7 @@ class Carousel extends React.Component {
     render() {
         return(
             <Container fluid={true}>
-                <Row className="justify-content-around">
+                <Row className="justify-content-around p-10">
                     {this.makeItems(this.state.items)}
 
                 </Row>
@@ -83,4 +95,4 @@ class Carousel extends React.Component {
     }
 }
 
-export default Carousel;
+export default Gallery;

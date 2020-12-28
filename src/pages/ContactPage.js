@@ -1,11 +1,14 @@
 import React from "react";
 
+import Axios from 'axios';
+
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 
 import Hero from "../components/Hero";
 import Content from "../components/Content";
+
 
 
 class ContactPage extends React.Component {
@@ -39,14 +42,61 @@ class ContactPage extends React.Component {
 
         this.setState({
             disabled: true,
-            emailSent: true
-        })
+        });
+
+        Axios.post("http://localhost:3030/api/email", this.state)
+            .then(res => {
+
+                if(res.data.success) {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+
+                } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    });
+                }
+            })
+
+            .catch(err => {
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                });
+            })
     }
 
     render() {
+        
         return(
+            // <div>
+                // <Hero title={this.props.title} />
+
+                // <Content>
+                //     <p>Hi, I'm Carter. I'm a first year Computer Science and Industrial Design student at Georgia Tech.</p>
+                //     <p>I like taking an idea and bringing it to life in the digital realm.</p>
+                //     <p>I'm passionate about spreading opportunity, and creating a more equitable future.</p>
+                //     <p>I never leave things half-done, and I obsess over the details. I like problem-solving in a creative, value-oriented way.</p>
+                //     <p>I don’t try to change THE world, but I constantly strive to change A world.</p>
+
+
+                // </Content>
+            // </div>
             <div>
                 <Hero title={this.props.title} />
+                <Content>
+                    <p>Hi, I'm Carter. I'm a first year Computer Science and Industrial Design student at Georgia Tech.</p>
+                    <p>I like taking an idea and bringing it to life in the digital realm.</p>
+                    <p>I'm passionate about spreading opportunity, and creating a more equitable future.</p>
+                    <p>I never leave things half-done, and I obsess over the details. I like problem-solving in a creative, value-oriented way.</p>
+                    <p>I don’t try to change THE world, but I constantly strive to change A world.</p>
+
+
+                </Content>
+                <Hero subTitle={this.props.subTitle} />
 
                 <Content>
                     <Form onSubmit={this.handleSubmit}>
