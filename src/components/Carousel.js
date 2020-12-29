@@ -3,7 +3,7 @@ import React from "react";
 import Card from "../components/Card";
 
 import gpa from "../assets/images/gpa.jpg";
-import sixfeet from "../assets/images/sixfeet.png";
+import sixfeet from "../assets/images/sixfeet.JPG";
 import helpinghand from "../assets/images/helpinghand.jpg";
 
 import Container from "react-bootstrap/Container";

@@ -13,7 +13,7 @@ function DesignsPage(props) {
 
     return(
         <div>
-            <Hero title={props.title} />
+            <h1 className='products'>PRODUCTS</h1>;
 
 
             <Gallery />
