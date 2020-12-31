@@ -8,7 +8,8 @@ import DesignCard from '../components/DesignCard';
 
 
 import Container from "react-bootstrap/Container";
-import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour, infoObjTwo } from './HomePage/HomePageData';
+
+import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour, infoObjOne } from './HomePage/HomePageData';
 
 
 
@@ -20,10 +21,7 @@ function DesignsPage(props) {
     return(
         <div>
             <InfoSection {...homeObjOne} />
-            <ContentSection {...infoObjTwo} />
-
-
-
+            {/* <ContentSection {...infoObjOne} /> */}
             <DesignCard />
 
         </div>

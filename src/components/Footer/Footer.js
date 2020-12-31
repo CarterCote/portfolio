@@ -2,6 +2,8 @@ import React from 'react';
 import GlobalStyle, { Button } from '../../globalStyles.js';
 import logo from "../../assets/images/logo2.png";
 
+import Button2 from "react-bootstrap/Button";
+
 import {
   FaTelegram,
   FaInstagram,
@@ -86,18 +88,19 @@ function Footer() {
           </FooterLinkItems> */}
         </FooterLinksWrapper>
       </FooterLinksContainer>
+      <Button2 variant="light">Resume</Button2>
       <SocialMedia>
         <SocialMediaWrap>
         <SocialIcons>
-            <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
+            <SocialIconLink href='//www.linkedin.com/in/carter-cote-960a55179/' target='_blank' aria-label='Linkedin'>
               <FaLinkedin />
             </SocialIconLink>
-            <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
+            <SocialIconLink href='//www.instagram.com/carter.cote' target='_blank' aria-label='Instagram'>
               <FaInstagram />
             </SocialIconLink>
             <SocialIconLink
               href={
-                '//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber'
+                '//www.youtube.com/channel/UCo-DJjksl3U0kizae-nDERw'
               }
               rel='noopener noreferrer'
               target='_blank'
@@ -108,7 +111,7 @@ function Footer() {
             <SocialIconLink href='/' target='_blank' aria-label='Twitter'>
               <FaTwitter />
             </SocialIconLink>
-            <SocialIconLink href='/' target='_blank' aria-label='LinkedIn'>
+            <SocialIconLink href='//t.me/cartercote' target='_blank' aria-label='LinkedIn'>
               <FaTelegram />
             </SocialIconLink>
           </SocialIcons>
@@ -118,7 +121,7 @@ function Footer() {
               <img src={logo} alt="" style={{width: "6%", margin: 0}}/>
               CARTERCOTE.COM
             </SocialLogo> */}
-          <WebsiteRights>© 2020 ALL RIGHTS RESERVED. — <a href="www.google.com">Designed & Coded by Carter Cote</a></WebsiteRights>
+          <WebsiteRights>© 2020 ALL RIGHTS RESERVED. — <a href="/">Designed & Coded by Carter Cote</a></WebsiteRights>
           
 
           </SocialMediaWrap>

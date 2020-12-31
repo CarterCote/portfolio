@@ -39,14 +39,14 @@ function Card({
               text="AOC's Helping Hand"
               subtext="Designed and developed Wix website for college & career program that I developed for my alma mater HS. Recruited 150+ alumni to provide dynamic content for the site."
               label='UX/UI Design'
-              path='/services'
+              path='https://www.aochelpinghand.org'
             />
             <CardItem
               src={sixfeet}
               text='Six Feet Supplies'
               subtext="Designed and developed Wix website for nonprofit that delivers groceries to the immunocompromised. Featured on CNN, LA Times. Over 14,000 site visitors."
               label='UX/UI Design'
-              path='/services'
+              path='https://www.sixfeetsupplies.com'
             />
           </ul>
           <ul className='cards__items'>
@@ -55,21 +55,21 @@ function Card({
               text='Global Prep Academy'
               subtext="Designed and developed Wix website for after-school program that guides students towards their career path. Over 3000 site visitors."
               label='UX/UI Design'
-              path='/services'
+              path='https://www.globalprepacademy.com'
             />
             <CardItem
               src={wusu}
               text='Wake Up, Stand Up'
               subtext="Designed and developed Wix website for student-led annual sexual harassment prevention seminar. Over 2000 site visitors."
               label='UX/UI Design'
-              path='/products'
+              path='https://www.wakeupstandup.site'
             />
             <CardItem
               src={cazares}
               text='Cazares for COC'
               subtext="Designed and developed Wix website for (now nominated) Sebastian Cazares's campaign for Community College Board of Trustees."
               label='UX/UI Design'
-              path='/sign-up'
+              path='https://www.cazaresforcoc.com'
             />
           </ul>
         </div>
