@@ -8,10 +8,10 @@ export const homeObjOne = {
     lightTopLine: true,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Marketing Agency',
-    headline: 'Lead Generation Specialist for Online Businesses',
+    topLine: 'DESIGNS',
+    headline: "Design Portfolio",
     description:
-      'We help business owners increase their revenue. Our team of unique specialist can help you achieve your business goals.',
+      "In addition to my passion for engineering, I'm also passionate about designing & building thoughtful graphics and websites with the combination of business, marketing, and UX/UI design in order to problem-solve or to express my creativity. Here are some of my notable works.",
     buttonLabel: 'Get Started',
     imgStart: '',
     img: require('../../assets/images/001.jpg'),
@@ -25,10 +25,10 @@ export const homeObjOne = {
     lightTopLine: true,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Instant Setup',
-    headline: 'Extremely quick onboarding process',
+    topLine: 'WHO AM I?',
+    headline: "Hi, I'm Carter Cote.",
     description:
-      "Once you've joined, our team of specialist will reach out to you and get you set up in minutes.",
+      "I'm a first-year student at the Georgia Institute of Technology, majoring in Computer Science and minoring in Industrial Design. I love coding and design, and I'm always chipping away at a side project or sketching an idea in my notebook.",
     buttonLabel: 'Learn More',
     imgStart: '',
     img: require('../../assets/images/002.jpg'),
@@ -64,6 +64,42 @@ export const homeObjOne = {
     headline: 'All your data is stored on our secure server',
     description:
       'You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.',
+    buttonLabel: 'Sign Up Now',
+    imgStart: 'start',
+    img: require('../../assets/images/003.jpg'),
+    alt: 'Vault',
+    start: 'true'
+  };
+
+  export const infoObjOne = {
+    primary: false,
+    lightBg: true,
+    lightTopLine: false,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'Secure Database',
+    headline: 'All your data is stored on our secure server',
+    description:
+      'You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.',
+    buttonLabel: 'Sign Up Now',
+    imgStart: 'start',
+    img: require('../../assets/images/003.jpg'),
+    alt: 'Vault',
+    start: 'true'
+  };
+
+  export const infoObjTwo = {
+    primary: false,
+    lightBg: true,
+    lightTopLine: false,
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'MORE ABOUT ME',
+    headline: 'What am I good at? What am I working on?',
+    description:
+      "I am a full-stack web developer and digital creator, who specializes in UX/UI design, graphic design, and product design. I’m very passionate about utilizing my entrepreneurial spirit in the digital realm to create a more equitable future. I like problem-solving in a creative, value-oriented way. I never leave things half-done, and I obsess over the details. I don’t try to change THE world, but I constantly strive to change A world..",
+    description2: "I have years of experience in developing digital projects that yield innovative solutions to problems within the community. Currently, I am looking for internships that will allow me to build upon my previous experience and to gain further background in computer science.",
+    description3: "I’m always looking for opportunities to develop a viable, feasible, and desirable product. My most notable project is a career readiness web platform at my alma mater high school, one that provides 27 pages of career exploration tools & alumni networking opportunities. By creating this platform, I had hoped to expand cultural capital to students that lack the resources necessary to prepare for college.",
     buttonLabel: 'Sign Up Now',
     imgStart: 'start',
     img: require('../../assets/images/003.jpg'),

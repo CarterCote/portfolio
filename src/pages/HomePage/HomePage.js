@@ -21,6 +21,7 @@ function HomePage() {
       {/* <InfoSection {...homeObjThree} />
       <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjFour} /> */}
+      
       <Card />
       {/* <Footer /> */}
     </>

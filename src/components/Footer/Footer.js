@@ -3,7 +3,7 @@ import GlobalStyle, { Button } from '../../globalStyles.js';
 import logo from "../../assets/images/logo2.png";
 
 import {
-  FaFacebook,
+  FaTelegram,
   FaInstagram,
   FaYoutube,
   FaTwitter,
@@ -13,6 +13,8 @@ import {
   FooterContainer,
   FooterSubscription,
   FooterSubText,
+  FooterTopLine,
+  FooterHeading,
   FooterSubHeading,
   Form,
   FormInput,
@@ -34,25 +36,31 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterSubscription>
+        <FooterTopLine>
+          Get in touch
+        </FooterTopLine>
+        <FooterHeading>
+          Let's work together
+        </FooterHeading>
         <FooterSubHeading>
-          Join our exclusive membership to receive the latest news and trends
+        If you have a website or mobile app idea in mind or you need some advice about product design, feel free to contact me. Currently my time books quickly, so the sooner you write, the better it is for both of us.
         </FooterSubHeading>
-        <FooterSubText>You can unsubscribe at any time.</FooterSubText>
+        {/* <FooterSubText>You can unsubscribe at any time.</FooterSubText> */}
         <Form>
-          <FormInput name='email' type='email' placeholder='Your Email' />
-          <Button fontBig>Subscribe</Button>
+          {/* <FormInput name='email' type='email' placeholder='Your Email' /> */}
+          <Button href="cartercote06@gmail.com" fontBig>cartercote06@gmail.com</Button>
         </Form>
       </FooterSubscription>
       <FooterLinksContainer>
         <FooterLinksWrapper>
-          <FooterLinkItems>
+          {/* <FooterLinkItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
             <FooterLink to='/sign-up'>How it works</FooterLink>
             <FooterLink to='/'>Testimonials</FooterLink>
             <FooterLink to='/'>Careers</FooterLink>
             <FooterLink to='/'>Investors</FooterLink>
             <FooterLink to='/'>Terms of Service</FooterLink>
-          </FooterLinkItems>
+          </FooterLinkItems> */}
           {/* <FooterLinkItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
             <FooterLink to='/'>Contact</FooterLink>
@@ -69,25 +77,20 @@ function Footer() {
             <FooterLink to='/'>Agency</FooterLink>
             <FooterLink to='/'>Influencer</FooterLink>
           </FooterLinkItems> */}
-          <FooterLinkItems>
-            <FooterLinkTitle>Social Media</FooterLinkTitle>
+          {/* <FooterLinkItems>
+            <FooterLinkTitle>Social</FooterLinkTitle>
             <FooterLink to='/'>Instagram</FooterLink>
             <FooterLink to='/'>Facebook</FooterLink>
             <FooterLink to='/'>Youtube</FooterLink>
             <FooterLink to='/'>Twitter</FooterLink>
-          </FooterLinkItems>
+          </FooterLinkItems> */}
         </FooterLinksWrapper>
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
-          <SocialLogo to='/'>
-            {/* <img src={logo} alt="" style={{width: "6%", margin: 0}}/> */}
-            CARTERCOTE.COM
-          </SocialLogo>
-          <WebsiteRights>CARTERCOTE © 2020</WebsiteRights>
-          <SocialIcons>
+        <SocialIcons>
             <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
-              <FaFacebook />
+              <FaLinkedin />
             </SocialIconLink>
             <SocialIconLink href='/' target='_blank' aria-label='Instagram'>
               <FaInstagram />
@@ -106,10 +109,20 @@ function Footer() {
               <FaTwitter />
             </SocialIconLink>
             <SocialIconLink href='/' target='_blank' aria-label='LinkedIn'>
-              <FaLinkedin />
+              <FaTelegram />
             </SocialIconLink>
           </SocialIcons>
-        </SocialMediaWrap>
+          </SocialMediaWrap>
+          <SocialMediaWrap>
+            {/* <SocialLogo to='/'>
+              <img src={logo} alt="" style={{width: "6%", margin: 0}}/>
+              CARTERCOTE.COM
+            </SocialLogo> */}
+          <WebsiteRights>© 2020 ALL RIGHTS RESERVED. — <a href="www.google.com">Designed & Coded by Carter Cote</a></WebsiteRights>
+          
+
+          </SocialMediaWrap>
+         
       </SocialMedia>
     </FooterContainer>
   );

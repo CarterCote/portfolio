@@ -4,15 +4,17 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 import GlobalStyle, { Container, Button } from '../globalStyles';
 import playground from "../assets/images/playground.png";
+import '../App.css';
+ 
 
 import {
-  InfoSec,
+  HubSec,
   InfoRow,
   InfoColumn,
   TextWrapper,
-  TopLine,
-  Heading,
-  Subtitle,
+  HubTopLine,
+  HubHeading,
+  HubSubtitle,
   ImgWrapper,
   Img
 } from './InfoSection/InfoSection.elements';
@@ -34,14 +36,14 @@ function TitleMessage({
 }) {
   return (
     <>
-      <InfoSec lightBg={lightBg}>
+      <HubSec lightBg={lightBg}>
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
-                <TopLine lightTopLine="CARTER COTE'S DIGITAL PORTFOLIO">CARTER COTE'S DIGITAL PORTFOLIO</TopLine>
-                <Heading lightText="Hi, I'm Carter.">👋Hi, I'm Carter. </Heading>
-                <Typewriter className="Subtitle"
+                <HubTopLine lightTopLine="CARTER COTE'S DIGITAL PORTFOLIO">CARTER COTE'S DIGITAL PORTFOLIO</HubTopLine>
+                <HubHeading lightText="Hi, I'm Carter.">👋Hi, I'm Carter. </HubHeading>
+                <Typewriter className="sign-up"
                   options={{
                     strings: ["Designer", "Problem Solver", "Effectuator"],
                     autoStart: true,
@@ -49,7 +51,7 @@ function TitleMessage({
                     delay: 50
                   }}
                 />
-                <Subtitle> </Subtitle>                
+                <HubSubtitle> </HubSubtitle>                
                 <Link to='/sign-up'>
                   <Button big fontBig primary="VIEW MY WORK">
                     VIEW MY WORK
@@ -64,7 +66,7 @@ function TitleMessage({
             </InfoColumn>
           </InfoRow>
         </Container>
-      </InfoSec>
+      </HubSec>
     </>
   );
 }

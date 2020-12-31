@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
+import Container from "../globalStyles";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
@@ -12,11 +12,12 @@ import Profile from "../assets/images/profile.jpg";
 
 import '../App.css';
 
+import { InfoSection } from '../components';
 import Hero from "../components/Hero";
 import Content from "../components/Content";
-import { homeObjOne, homeObjTwo, homeObjThree, homeObjFour } from './HomePage/HomePageData';
+import ContentSection from "../components/ContentSection";
 
-import { InfoSection } from '../components';
+import { homeObjOne, homeObjTwo, infoObjTwo, homeObjFour } from './HomePage/HomePageData';
 
 
 
@@ -83,21 +84,17 @@ class ContactPage extends React.Component {
         return(
             
             <div>
-                <InfoSection {...homeObjOne} />
-                <InfoSection {...homeObjThree} />
+                <InfoSection {...homeObjTwo} />
+                <ContentSection {...infoObjTwo} />
                 {/* <Hero title={this.props.title} /> */}
                 <Content >
-                    <p>Hi, I'm Carter. I'm a first year Computer Science and Industrial Design student at Georgia Tech.</p>
-                    <p>I like taking an idea and bringing it to life in the digital realm.</p>
-                    <p>I'm passionate about spreading opportunity, and creating a more equitable future.</p>
-                    <p>I never leave things half-done, and I obsess over the details. I like problem-solving in a creative, value-oriented way.</p>
-                    <p>I don’t try to change THE world, but I constantly strive to change A world.</p>
+                    
 
 
                 </Content>
                 {/* <Hero subTitle={this.props.subTitle} /> */}
-
                 <Content>
+                    <div className="contact">
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Group>
                             <Form.Label htmlFor="full-name">Full Name</Form.Label>
@@ -122,8 +119,10 @@ class ContactPage extends React.Component {
                         {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
 
                     </Form>
-
+                    </div>
                 </Content>
+
+
             </div>
         );
     }
