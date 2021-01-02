@@ -2,6 +2,8 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 
+import profile from "../../assets/images/profile.jpg";
+
 export const homeObjOne = {
     primary: true,
     lightBg: false,
@@ -103,6 +105,18 @@ export const homeObjOne = {
     buttonLabel: 'Sign Up Now',
     imgStart: 'start',
     img: require('../../assets/images/003.jpg'),
+    alt: 'Vault',
+    start: 'true'
+  };
+
+  export const imgObjTwo = {
+    primary: false,
+    lightBg: true,
+    lightTopLine: false,
+    lightText: false,
+    lightTextDesc: false,
+    imgStart: 'start',
+    img: profile,
     alt: 'Vault',
     start: 'true'
   };

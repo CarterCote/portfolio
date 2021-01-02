@@ -1,8 +1,9 @@
-import React from 'react';
-import GlobalStyle, { Button } from '../../globalStyles.js';
+import React, { useState, useEffect } from 'react';
+import GlobalStyle, { Container, Button } from '../../globalStyles.js';
 import logo from "../../assets/images/logo2.png";
 
 import Button2 from "react-bootstrap/Button";
+import { Link } from 'react-router-dom';
 
 import {
   FaTelegram,
@@ -33,24 +34,62 @@ import {
   SocialIcons,
   SocialIconLink
 } from './Footer.elements';
+import {
+  InfoSec,
+  InfoRow,
+  ContentInfoColumn,
+  ContentTextWrapper,
+  ContentTopLine,
+  ContentHeading,
+  ContentSubtitle,
+  ImgWrapper,
+  Img
+} from '../InfoSection/InfoSection.elements';
 
 function Footer() {
+
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener('resize', showButton);
+
   return (
+    <>
+    <InfoSec lightBg>
+    <Container>
+
     <FooterContainer>
       <FooterSubscription>
         <FooterTopLine>
-          Get in touch
         </FooterTopLine>
         <FooterHeading>
-          Let's work together
+        👋 I’m available for freelance work, please contact me <a style={{fontFamily: "Druk Wide Bold", color: "#42a1f5"}}href="mailto:cartercote06@gmail.com">here</a>.
         </FooterHeading>
         <FooterSubHeading>
-        If you have a website or mobile app idea in mind or you need some advice about product design, feel free to contact me. Currently my time books quickly, so the sooner you write, the better it is for both of us.
+        If you have a website or mobile app idea in mind, or if you're interested in my work, feel free to contact me. 
+        Please be patient with inquiries! I am currently in the middle of my academic semester.
         </FooterSubHeading>
         {/* <FooterSubText>You can unsubscribe at any time.</FooterSubText> */}
-        <Form>
+        <Form onClick={handleClick} click={click}>
           {/* <FormInput name='email' type='email' placeholder='Your Email' /> */}
-          <Button href="cartercote06@gmail.com" fontBig>cartercote06@gmail.com</Button>
+          <a href="https://drive.google.com/file/d/19xrtoznvBS4fh_YFwkGl7E092uZ7UKos/view?usp=sharing" target="_blank">
+          <Button2 variant="warning" style={{padding: "10px 40px"}}>RESUME</Button2>
+          </a>
         </Form>
       </FooterSubscription>
       <FooterLinksContainer>
@@ -88,10 +127,19 @@ function Footer() {
           </FooterLinkItems> */}
         </FooterLinksWrapper>
       </FooterLinksContainer>
-      <Button2 variant="light">Resume</Button2>
+
+
       <SocialMedia>
-        <SocialMediaWrap>
-        <SocialIcons>
+        {/* <SocialMediaWrap>
+
+          </SocialMediaWrap> */}
+          <SocialMediaWrap>
+            {/* <SocialLogo to='/'>
+              <img src={logo} alt="" style={{width: "6%", margin: 0}}/>
+              CARTERCOTE.COM
+            </SocialLogo> */}
+            <WebsiteRights>© 2020 ALL RIGHTS RESERVED. — <a href="/">Designed & Coded by Carter Cote</a></WebsiteRights>
+            <SocialIcons>
             <SocialIconLink href='//www.linkedin.com/in/carter-cote-960a55179/' target='_blank' aria-label='Linkedin'>
               <FaLinkedin />
             </SocialIconLink>
@@ -115,19 +163,15 @@ function Footer() {
               <FaTelegram />
             </SocialIconLink>
           </SocialIcons>
-          </SocialMediaWrap>
-          <SocialMediaWrap>
-            {/* <SocialLogo to='/'>
-              <img src={logo} alt="" style={{width: "6%", margin: 0}}/>
-              CARTERCOTE.COM
-            </SocialLogo> */}
-          <WebsiteRights>© 2020 ALL RIGHTS RESERVED. — <a href="/">Designed & Coded by Carter Cote</a></WebsiteRights>
-          
 
-          </SocialMediaWrap>
+        </SocialMediaWrap>
          
       </SocialMedia>
     </FooterContainer>
+    </Container>
+
+    </InfoSec>
+    </>
   );
 }
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import GlobalStyle, { Container } from '../../globalStyles.js';
 
 export const Nav = styled.nav`
-  background: #101522;
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -13,14 +13,17 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+  
 `;
 
 export const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
-  margin: 30px auto 20px auto;
-
+  margin: 30px auto 20px 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 100vw;
   ${Container}
 
 `;
@@ -53,9 +56,10 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavMenu = styled.ul`
-  display: flex;
-  align-items: center;
+  ${'' /* display: flex; */}
+  align-items: right;
   list-style: none;
+  margin-top: 10px;
   text-align: center;
   @media screen and (max-width: 960px) {
     display: flex;
@@ -67,12 +71,13 @@ export const NavMenu = styled.ul`
     left: ${({ click }) => (click ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #101522;
+    background: #0d1f68;
   }
 `;
 
 export const NavItem = styled.li`
-  height: 80px;
+  height: 50px;
+  
   border-bottom: 2px solid transparent;
   &:hover {
     ${'' /* border-bottom: 1px solid #4b59f7; */}

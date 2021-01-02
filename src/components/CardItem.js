@@ -19,7 +19,9 @@ function CardItem(props) {
           <div className='cards__item__info'>
             <h2 className='cards__item__title' to={props.path}>{props.text}</h2>
             <h2 className='cards__item__text'>{props.subtext}</h2>
-            <Button variant="primary">VIEW PROJECT</Button>
+            <a href={props.path} target="_blank">
+              <Button variant="warning">VIEW PROJECT</Button>
+            </a>
           </div>
         </Row>
       </li>

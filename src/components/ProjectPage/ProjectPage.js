@@ -9,7 +9,7 @@ import {
 
   ContentInfoColumn,
   ContentTextWrapper,
-  ContentTopLine,
+  ContentTopLine,s
   ContentHeading,
   ContentSubtitle,
   ImgWrapper,

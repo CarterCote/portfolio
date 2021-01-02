@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import GlobalStyle, { Button } from '../../globalStyles.js';
+import Progress from "../../components/Progress";
 import logo from "../../assets/images/logo2.png";
 import {
   Nav,
@@ -40,8 +41,11 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
+      
         <Nav>
+        
           <NavbarContainer>
+
             <NavLogo to='/' onClick={closeMobileMenu}>
               <img src={logo} alt="" style={{width: "6%"}}/>
               
@@ -49,7 +53,7 @@ function Navbar() {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <NavMenu onClick={handleClick} click={click}>
+            <NavMenu onClick={handleClick} click={click} class="flex-column">
               <NavItem>
                 <NavLinks to='/' onClick={closeMobileMenu}>
                   Home
@@ -82,6 +86,7 @@ function Navbar() {
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
+
     </>
   );
 }

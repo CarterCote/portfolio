@@ -2,9 +2,10 @@ import React from 'react';
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
-import GlobalStyle, { Container, Button } from '../globalStyles';
+import GlobalStyle, { Container } from '../globalStyles';
 import playground from "../assets/images/playground.png";
 import '../App.css';
+import Button from "react-bootstrap/Button";
  
 
 import {
@@ -43,27 +44,28 @@ function TitleMessage({
               <TextWrapper>
                 <HubTopLine lightTopLine="CARTER COTE'S DIGITAL PORTFOLIO">CARTER COTE'S DIGITAL PORTFOLIO</HubTopLine>
                 <HubHeading lightText="Hi, I'm Carter.">👋Hi, I'm Carter. </HubHeading>
-                <Typewriter className="sign-up"
-                  options={{
-                    strings: ["Designer", "Problem Solver", "Effectuator"],
-                    autoStart: true,
-                    loop: true,
-                    delay: 50
-                  }}
-                />
+                <h1 style={{textAlign: "center"}}>
+                  <Typewriter className="sign-up"
+                    options={{
+                      strings: ["Digital Creator", "Creative Developer", "Problem Solver", "Effectuator"],
+                      autoStart: true,
+                      loop: true,
+                      delay: 50
+                    }}
+                  />
+                </h1>
+
                 <HubSubtitle> </HubSubtitle>                
-                <Link to='/sign-up'>
-                  <Button big fontBig primary="VIEW MY WORK">
-                    VIEW MY WORK
-                  </Button>
-                </Link>
+                <a href="#cardsection" class="d-flex justify-content-center">
+                  <Button variant="light" style={{padding: "15px 40px"}}>VIEW MY WORK</Button>
+                </a>
               </TextWrapper>
             </InfoColumn>
-            <InfoColumn>
+            {/* <InfoColumn>
               <ImgWrapper start={start}>
                 <Img src={playground} alt={alt} />
               </ImgWrapper>
-            </InfoColumn>
+            </InfoColumn> */}
           </InfoRow>
         </Container>
       </HubSec>

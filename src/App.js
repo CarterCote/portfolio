@@ -1,31 +1,72 @@
-import React from 'react';
+import React, { Component } from 'react';
 import GlobalStyle from './globalStyles.js';
 import HomePage from './pages/HomePage/HomePage';
 import Designs from './pages/DesignsPage';
 import Contact from './pages/ContactPage';
-// import SignUp from './pages/SignUp/SignUp';
+import Progress from "./components/Progress";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { Navbar, Footer } from './components';
 
-function App() {
-  return (
-    <Router>
-      <GlobalStyle />
-      <ScrollToTop />
-      <Navbar />
-      <Switch>
-        <Route path='/' exact component={HomePage} />
-        <Route path='/designs' component={Designs} />
-        <Route path='/contact' component={Contact} />
-      </Switch>
-      <Footer />
-    </Router>
-  );
+export default class App extends Component {
+  state = {
+    scrollPostion: 0
+  }
+
+  listenToScrollEvent = () => {
+    document.addEventListener("scroll", () => {
+      requestAnimationFrame(() => {
+        this.calculateScrollDistance();
+      });
+    });
+  }
+
+  calculateScrollDistance = () => {
+    const scrollTop = window.pageYOffset; // how much the user has scrolled by
+    const winHeight = window.innerHeight;
+    const docHeight = this.getDocHeight();
+
+    const totalDocScrollLength = docHeight - winHeight;
+    const scrollPostion = Math.floor(scrollTop / totalDocScrollLength * 100)
+
+    this.setState({
+      scrollPostion,
+    });
+  }
+
+  getDocHeight = () => {
+    return Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+  }
+
+  componentDidMount() {
+    this.listenToScrollEvent();
+  }
+
+
+  render() {
+    return (
+      <Router>
+        <GlobalStyle />
+        <ScrollToTop />
+        <Progress scroll={this.state.scrollPostion + '%'} />
+
+        <Navbar />
+
+        <Switch>
+          <Route path='/' exact component={HomePage} />
+          <Route path='/designs' component={Designs} />
+          <Route path='/contact' component={Contact} />
+        </Switch>
+        <Footer />
+      </Router>
+    );
+  }
+
 }
-
-export default App;
-
 
 // class App extends React.Component {
 

@@ -3,22 +3,22 @@ import { FaMagento } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
-  background-color: #101522;
-  padding: 4rem 0 2rem 0;
+  background-color: #fff;
+  padding: 2rem 4rem 0rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: CENTER;
+  align-items: left;
 `;
 
 export const FooterSubscription = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  text-align: left;
+  align-items: left;
   margin-bottom: 24px;
-  padding: 24px;
+  padding: 16px;
   color: #fff;
 `;
 
@@ -26,8 +26,7 @@ export const FooterTopLine = styled.div`
   color: ${({ lightTopLine }) => (lightTopLine ? '#a9b3c1' : '#a9b3c1')};
   font-size: 18px;
   line-height: 16px;
-  text-align: center;
-  
+  text-align: left;
   font-weight: 700;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
@@ -37,29 +36,35 @@ export const FooterTopLine = styled.div`
 export const FooterHeading = styled.h1`
   margin-bottom: 24px;
   font-size: 48px;
-  text-align: center;
+
+  text-align: left;
   line-height: 1.1;
+  font-family: "Druk Wide Bold";
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#fff')};
+  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#0d1f68')};
 `;
 
 export const FooterSubHeading = styled.p`
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+  font-family: 'Circular STD Book', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
   margin-bottom: 24px;
   font-size: 22px;
-  max-width: 800px;
+  max-width: 1000px;
+  color: #202020;
 `;
 
 export const FooterSubText = styled.p`
   margin-bottom: 24px;
   font-size: 20px;
+  color: #202020;
+
 `;
 
 export const Form = styled.form`
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  
   @media screen and (max-width: 820px) {
     flex-direction: column;
     width: 80%;
@@ -137,8 +142,8 @@ export const SocialMedia = styled.section`
 
 export const SocialMediaWrap = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: left;
   width: 98%;
   max-width: 1000px;
   margin: 40px auto 0 auto;
@@ -160,11 +165,13 @@ export const SocialLogo = styled(Link)`
 
 export const SocialIcon = styled(FaMagento)`
   margin-right: 10px;
+  
 `;
 
 export const WebsiteRights = styled.small`
-  color: #fff;
+  color: #202020;
   margin-bottom: 16px;
+  margin-top: 10px;
 `;
 
 export const SocialIcons = styled.div`
@@ -172,9 +179,12 @@ export const SocialIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 300px;
+  margin-bottom: 16px;
+
+
 `;
 
 export const SocialIconLink = styled.a`
-  color: #fff;
+  color: #202020;
   font-size: 24px;
 `;

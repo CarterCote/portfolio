@@ -16,8 +16,9 @@ import { InfoSection } from '../components';
 import Hero from "../components/Hero";
 import Content from "../components/Content";
 import ContentSection from "../components/ContentSection";
+import HeroImg from "../components/HeroImg";
 
-import { homeObjOne, homeObjTwo, infoObjTwo, homeObjFour } from './HomePage/HomePageData';
+import { homeObjOne, homeObjTwo, infoObjTwo, imgObjTwo } from './HomePage/HomePageData';
 
 
 
@@ -85,7 +86,10 @@ class ContactPage extends React.Component {
             
             <div>
                 <InfoSection {...homeObjTwo} />
+                <HeroImg {...imgObjTwo} />
+
                 <ContentSection {...infoObjTwo} />
+
                 {/* <Hero title={this.props.title} /> */}
                 <Content >
                     
@@ -96,6 +100,7 @@ class ContactPage extends React.Component {
                 <Content>
                     <div className="contact">
                     <Form onSubmit={this.handleSubmit}>
+                    <h1 style={{fontFamily: "Druk Wide Bold", color: "#000", fontSize: "28px", marginBottom: "12px"}}>Leave a Message!</h1>
                         <Form.Group>
                             <Form.Label htmlFor="full-name">Full Name</Form.Label>
                             <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange}/>
@@ -111,7 +116,7 @@ class ContactPage extends React.Component {
                             <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.message} onChange={this.handleChange}/>
                         </Form.Group>
 
-                        <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
+                        <Button className="d-inline-block" variant="warning" type="submit" disabled={this.state.disabled}>
                             Send
                         </Button>
 

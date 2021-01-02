@@ -11,6 +11,7 @@ import Image from "react-bootstrap/Image";
 import '../../App.css';
 import Card from '../../components/Card';
 import Hero from "../../components/Hero";
+
 import Footer from '../../components/Footer/Footer';
 
 function HomePage() {
