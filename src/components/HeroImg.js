@@ -6,12 +6,6 @@ import {
   InfoSec,
   InfoRow,
   InfoColumn,
-
-  ContentInfoColumn,
-  ContentTextWrapper,
-  ContentTopLine,
-  ContentHeading,
-  ContentSubtitle,
   ImgWrapper,
   Img
 } from './InfoSection/InfoSection.elements';
@@ -36,11 +30,11 @@ function HeroImg({
       <InfoSec lightBg={lightBg}>
         <Container>
           <InfoRow imgStart={imgStart}>
-            <InfoColumn>
+            {/* <InfoColumn> */}
               <ImgWrapper start={start}>
                 <Img src={img} alt={alt} />
               </ImgWrapper>
-            </InfoColumn>
+            {/* </InfoColumn> */}
           </InfoRow>
         </Container>
       </InfoSec>

@@ -91,11 +91,11 @@ export const homeObjOne = {
   };
 
   export const infoObjTwo = {
-    primary: false,
-    lightBg: true,
-    lightTopLine: false,
-    lightText: false,
-    lightTextDesc: false,
+    primary: true,
+    lightBg: false,
+    lightTopLine: true,
+    lightText: true,
+    lightTextDesc: true,
     topLine: 'MORE ABOUT ME',
     headline: 'What am I good at? What am I working on?',
     description:
@@ -110,11 +110,11 @@ export const homeObjOne = {
   };
 
   export const imgObjTwo = {
-    primary: false,
-    lightBg: true,
-    lightTopLine: false,
-    lightText: false,
-    lightTextDesc: false,
+    primary: true,
+    lightBg: false,
+    lightTopLine: true,
+    lightText: true,
+    lightTextDesc: true,
     imgStart: 'start',
     img: profile,
     alt: 'Vault',

@@ -78,6 +78,13 @@ export const ImgWrapper = styled.div`
   justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
 `;
 
+export const ProjImgWrapper = styled.div`
+  max-width: 1555px;
+  display: flex;
+  justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
+`;
+
+
 export const HubTopLine = styled.div`
   color: ${({ lightTopLine }) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
   font-size: 18px;
@@ -116,6 +123,15 @@ export const Img = styled.img`
   vertical-align: middle;
   display: inline-block;
   max-height: 600px;
+`;
+
+export const ProjImg = styled.img`
+  padding-right: 0;
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  max-height: 700px;
 `;
 
 export const HubHeading = styled.h1`
