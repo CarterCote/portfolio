@@ -14,6 +14,7 @@ import {
 } from 'react-icons/fa';
 import {
   FooterContainer,
+  FooterSec,
   FooterSubscription,
   FooterSubText,
   FooterTopLine,
@@ -34,17 +35,6 @@ import {
   SocialIcons,
   SocialIconLink
 } from './Footer.elements';
-import {
-  InfoSec,
-  InfoRow,
-  ContentInfoColumn,
-  ContentTextWrapper,
-  ContentTopLine,
-  ContentHeading,
-  ContentSubtitle,
-  ImgWrapper,
-  Img
-} from '../InfoSection/InfoSection.elements';
 
 function Footer() {
 
@@ -70,7 +60,7 @@ function Footer() {
 
   return (
     <>
-    <InfoSec lightBg>
+    <FooterSec>
     <Container>
 
     <FooterContainer>
@@ -170,7 +160,7 @@ function Footer() {
     </FooterContainer>
     </Container>
 
-    </InfoSec>
+    </FooterSec>
     </>
   );
 }

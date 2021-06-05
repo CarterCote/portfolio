@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Circular Std Book', sans-serif;
  }
  body {
-   background-color: #0d1f68;
+   background-color: #060606;
  } 
 `;
 

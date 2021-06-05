@@ -6,6 +6,7 @@ import GlobalStyle, { Container } from '../globalStyles';
 import playground from "../assets/images/playground.png";
 import '../App.css';
 import Button from "react-bootstrap/Button";
+import Static from "../components/video/static2.mp4";
  
 
 import {
@@ -40,6 +41,23 @@ function TitleMessage({
       <HubSec lightBg={lightBg}>
         <Container>
           <InfoRow imgStart={imgStart}>
+          <video
+            autoPlay
+            loop
+            muted
+            style={{
+              position: "absolute",
+              width: "100%",
+              left: "50%",
+              top: "50%",
+              height: "100%",
+              objectFix: "cover",
+              transform: "translate(-50%, -50%)",
+              zIndex: "-1"
+            }}
+          >
+            <source src={Static} type="video/mp4" />
+          </video>
             <InfoColumn>
               <TextWrapper>
                 <HubTopLine lightTopLine="CARTER COTE'S DIGITAL PORTFOLIO">CARTER COTE'S DIGITAL PORTFOLIO</HubTopLine>

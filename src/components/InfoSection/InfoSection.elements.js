@@ -3,14 +3,16 @@ import styled from 'styled-components';
 export const HubSec = styled.div`
   color: #fff;
   padding: 120px 0 80px 0;
-  background: ${({ lightBg }) => (lightBg ? '#fff' : '#0d1f68')};
+  background: transparent;
+  ${'' /* background: ${({ lightBg }) => (lightBg ? '#fff' : '#0d1f68')}; */}
   align-items: center;
 `;
 
 export const InfoSec = styled.div`
   color: #fff;
   padding: 4rem 0 2rem 0;
-  background: ${({ lightBg }) => (lightBg ? '#fff' : '#0d1f68')};
+  background: #060606;
+  ${'' /* background: ${({ lightBg }) => (lightBg ? '#060606' : '#0d1f68')}; */}
 `;
 
 
