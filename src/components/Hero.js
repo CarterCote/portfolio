@@ -30,33 +30,3 @@ function Hero() {
 }
 
 export default Hero;
-// import React from "react";
-// import Jumbotron from "react-bootstrap/Jumbotron";
-// import Container from "react-bootstrap/Container";
-// import Row from "react-bootstrap/Row";
-// import Col from "react-bootstrap/Col";
-// import '../App.css';
-// import TitleMessage from "../components/TitleMessage";
-
-
-
-// function Hero(props) {
-
-//     return(
-//         <Jumbotron className="bg-dark hub jumbotron-fluid p-100">
-//             <Container fluid={true} className="py-20">
-//                 <Row className="justify-content-center py-5">
-//                     <Col md={8} sm={12}>
-//                         { props.title && <h1 className="display-1 jumbotron-title font-weight-bolder">{props.title}</h1> }
-//                         { props.subTitle && <h3 className="display-5 jumbotron-title font-weight-light">{props.subTitle}</h3> }
-//                         { props.text && <h3 className="lead jumbotron-title font-weight-light">{props.text}</h3> }
-
-//                     </Col>
-//                 </Row>
-//             </Container>
-//         </Jumbotron>
-//     );
-
-// }
-
-// export default Hero;

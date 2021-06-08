@@ -49,18 +49,8 @@ function ContentSection({
                 <br />
                 <ContentSubtitle lightTextDesc={lightTextDesc}>{description3}</ContentSubtitle>
                 <br />
-                {/* <Link to='/sign-up'>
-                  <Button big fontBig primary={primary}>
-                    {buttonLabel}
-                  </Button>
-                </Link> */}
               </ContentTextWrapper>
             </ContentInfoColumn>
-            {/* <InfoColumn>
-              <ImgWrapper start={start}>
-                <Img src={img} alt={alt} />
-              </ImgWrapper>
-            </InfoColumn> */}
           </InfoRow>
         </Container>
       </InfoSec>
